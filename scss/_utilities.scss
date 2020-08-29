@@ -1,15 +1,46 @@
+.container{
+   max-width: $max-width;
+   margin: auto;
+   overflow: hidden;
+   padding: 0 2rem;
+   margin-top: 6rem;
+   margin-bottom: 3rem;
+}
+
 .x-large{
     font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
+.line{
+   height: 1px;
+   background: #ccc;
+   margin: 1.5rem 0;
+}
 
+.badge{
+   font-size: 0.8rem;
+   padding: 0.1rem;
+   text-align: center;
+   margin: 0.3rem;
+   color: #333;
+}
+
+.text-primary{
+   color: $primary-color;
+}
+
+.x-large{
+   font-size: 3rem;
+   line-height: 1.2;
+   margin-bottom: 1rem;
+}
 .lead{
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.bg{
+.bg, .badge{
     &-primary{
        @include setBackgroundColor($primary-color)
     }
@@ -77,6 +108,26 @@
         
     }
 
+.alert{
+   padding: 0.8rem;
+   margin: 1rem;
+   opacity: 0.9;
+   background-color: $light-color;
+   color: #333;
+   &.alert-primary{
+      @include setBackgroundColor($primary-color)
+   }
+    &.alert-dark{
+       @include setBackgroundColor($dark-color)
+    }
+    &.alert-success{
+       @include setBackgroundColor($success-color)
+    }
+    &.alert-danger{
+       @include setBackgroundColor($danger-color)
+    }
+
+}
 
 .dark-overlay{
     height: 100%;
@@ -86,3 +137,18 @@
     left: 0;
     background-color: rgba(0,0,0,0.7)
 }
+
+.round-img{
+   border-radius: 50%;
+}
+
+.table{
+   th, td{
+      padding: 1rem;
+      text-align: left;
+   }
+   th{
+      background-color: $light-color;
+   }
+}
+
